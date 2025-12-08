@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLACK ICE - Secure Access</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            background: #0a0a0a;
+            color: #00ff00;
+            font-family: 'Courier New', monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: 
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(0, 255, 0, 0.03) 2px,
+                    rgba(0, 255, 0, 0.03) 4px
+                );
+        }
+        .login-box {
+            border: 2px solid #00ff00;
+            padding: 40px;
+            background: rgba(26, 26, 26, 0.95);
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+            max-width: 500px;
+            width: 90%;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 28px;
+            text-shadow: 0 0 10px #00ff00;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 12px;
+            color: #00aa00;
+            margin-bottom: 30px;
+        }
+        input {
+            background: #000;
+            border: 1px solid #00ff00;
+            color: #00ff00;
+            padding: 12px;
+            margin: 10px 0;
+            width: 100%;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+        }
+        input:focus {
+            outline: none;
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+        }
+        button {
+            background: #00ff00;
+            color: #000;
+            border: none;
+            padding: 12px 20px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+            font-family: 'Courier New', monospace;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        button:hover {
+            background: #00cc00;
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.8);
+        }
+        .footer {
+            font-size: 11px;
+            color: #008800;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .warning {
+            color: #ff0000;
+            font-size: 10px;
+            margin-top: 15px;
+            text-align: center;
+            border: 1px solid #ff0000;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <h1>⬢ BLACK ICE ⬢</h1>
+        <div class="subtitle">SECURE ACCESS TERMINAL</div>
+        
+        <form onsubmit="return checkLogin()">
+            <input type="text" id="username" placeholder="● USERNAME" required>
+            <input type="password" id="password" placeholder="● PASSWORD" required>
+            <button type="submit">→ AUTHENTICATE</button>
+        </form>
+        
+        <div class="footer">
+            Trusted employees only. Access logs are monitored.
+        </div>
+        
+        <div class="warning">
+            ⚠ UNAUTHORIZED ACCESS WILL BE PROSECUTED
+        </div>
+    </div>
+
+    <!-- 
+    ═══════════════════════════════════════════════════════════════
+    DEVELOPER NOTES - CONFIDENTIAL
+    ═══════════════════════════════════════════════════════════════
+    
+    TODO: Fix authentication vulnerability - Alex flagged this!
+    Legacy bypass still active for maintenance access.
+    
+    MAINTENANCE CREDENTIALS:
+    Username: a.mercer
+    Password: ProjectGlacier2025
+    
+    Will patch after Q4 audit. For now, devs can use above.
+    
+    Main documents portal: documents.html
+    Direct access (if you know the path): docs/Project_Glacier.pdf
+    
+    ═══════════════════════════════════════════════════════════════
+    -->
+
+    <script>
+        function checkLogin() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            
+            // Check maintenance credentials
+            if (username === 'a.mercer' && password === 'ProjectGlacier2025') {
+                window.location.href = 'documents.html';
+                return false;
+            }
+            
+            alert('Access Denied');
+            return false;
+        }
+    </script>
+</body>
+</html>

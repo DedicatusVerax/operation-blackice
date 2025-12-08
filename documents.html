@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLACK ICE - Internal Documents</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            background: #0a0a0a; 
+            color: #00ff00; 
+            font-family: 'Courier New', monospace; 
+            padding: 40px;
+        }
+        .header {
+            border-bottom: 2px solid #00ff00;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        h1 {
+            text-shadow: 0 0 10px #00ff00;
+        }
+        .user-info {
+            font-size: 12px;
+            color: #008800;
+            margin-top: 10px;
+        }
+        .document-list {
+            list-style: none;
+            padding: 0;
+        }
+        .document-item {
+            background: rgba(0, 255, 0, 0.05);
+            border: 1px solid #00ff00;
+            padding: 20px;
+            margin: 15px 0;
+            transition: all 0.3s;
+        }
+        .document-item:hover {
+            background: rgba(0, 255, 0, 0.1);
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+        }
+        .doc-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .doc-meta {
+            font-size: 12px;
+            color: #008800;
+            margin-bottom: 10px;
+        }
+        .doc-link {
+            color: #00ff00;
+            text-decoration: none;
+            padding: 8px 15px;
+            border: 1px solid #00ff00;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        .doc-link:hover {
+            background: #00ff00;
+            color: #000;
+        }
+        .access-denied {
+            color: #ff0000;
+            font-size: 12px;
+            font-style: italic;
+        }
+        .flag-box {
+            background: rgba(0, 255, 0, 0.1);
+            border: 2px solid #00ff00;
+            padding: 20px;
+            margin-top: 40px;
+            text-align: center;
+        }
+        .flag {
+            font-size: 20px;
+            font-weight: bold;
+            color: #00ff00;
+            text-shadow: 0 0 10px #00ff00;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>⬢ BLACK ICE - INTERNAL DOCUMENTS ⬢</h1>
+        <div class="user-info">
+            Logged in as: a.mercer (Alex Mercer) | Employee ID: BX-2847
+        </div>
+    </div>
+
+    <ul class="document-list">
+        <li class="document-item">
+            <div class="doc-title">📄 Project_Glacier.pdf</div>
+            <div class="doc-meta">
+                Classification: CONFIDENTIAL | 
+                Last modified: October 28, 2025 | 
+                Author: Alex Mercer (BX-2847)
+            </div>
+            <div class="doc-desc">
+                Investigation report on VERAX DEDICATUS broker activities. 
+                Contains OSINT leads and suspect profiles.
+            </div>
+            <br>
+            <a href="docs/Project_Glacier.pdf" download class="doc-link">⬇ DOWNLOAD</a>
+        </li>
+
+        <li class="document-item">
+            <div class="doc-title">📊 Employee_Database.xlsx</div>
+            <div class="doc-meta">
+                Classification: RESTRICTED | 
+                Last modified: November 15, 2025
+            </div>
+            <div class="access-denied">⚠ ACCESS DENIED - Requires ADMIN privileges</div>
+        </li>
+
+        <li class="document-item">
+            <div class="doc-title">📁 Q4_Financial_Reports.zip</div>
+            <div class="doc-meta">
+                Classification: INTERNAL | 
+                Last modified: November 10, 2025
+            </div>
+            <div class="access-denied">⚠ ACCESS DENIED - Requires FINANCE role</div>
+        </li>
+    </ul>
+
+    <div class="flag-box">
+        <div style="margin-bottom: 10px;">🏁 CHALLENGE COMPLETED</div>
+        <div class="flag">FLAG{1nj3ct10n_15_St1ll_Cl4ss1c}</div>
+        <div style="margin-top: 15px; font-size: 12px; color: #008800;">
+            You found the hidden credentials in the HTML source code!<br>
+            Always check developer comments for security leaks.
+        </div>
+    </div>
+</body>
+</html>
